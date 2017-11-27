@@ -40,6 +40,21 @@ public class Driver {
 		students[2] = new Student("Steve", 3.2, 19);
 		// Step 6:
 		System.out.println("Best student: " + Student.findBestStudent(students));
+		// Step 8:
+		Student s1 = new Student("Emmet", 3.5, 18);
+		Student s2 = new Student("John", 3.6, 20);
+		Student s3 = new Student("Steve", 3.2, 19);
+		Student s4 = new Student("Bob", 3.4, 29);
+		Student s5 = new Student("Joe", 4.0, 30);
+		// Step 9:
+		Student[] arrayOfStudents = { s1, s2, s3, s4, s5 };
+		System.out.println("Best student: " + Student.findBestStudent(arrayOfStudents));
+		// Step 10:
+		Student[] studentsBetween20and30 = Student.findStudents(arrayOfStudents, 20, 30);
+		// Step 11:
+		for (int i = 0; i < studentsBetween20and30.length; i++) {
+			System.out.println(studentsBetween20and30[i]);
+		}
 	}
 
 }

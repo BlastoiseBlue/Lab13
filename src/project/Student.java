@@ -28,4 +28,24 @@ public class Student {
 		}
 		return s[bestStudent].name;
 	}
+
+	// Step 7:
+	public static Student[] findStudents(Student[] s, int ageMin, int ageMax) {
+		int i = 0;
+		int n = 0;
+		for (i = 0; i < s.length; i++) {
+			if (s[i].age >= ageMin && s[i].age < ageMax) {
+				n++;
+			}
+		}
+		Student[] placeHolder = new Student[n];
+		int j = 0;
+		for (i = 0; i < s.length; i++) {
+			if (s[i].age >= ageMin && s[i].age < ageMax) {
+				placeHolder[j] = s[i];
+				j++;
+			}
+		}
+		return placeHolder;
+	}
 }
